@@ -15,7 +15,7 @@ class Search extends React.Component {
 		this.handleSearch = this.handleSearch.bind(this);
 	}
 
-	handleSearch(e){ 
+	handleSearch(e){
 		this.setState({input: e.target.value})
 	}
 
@@ -52,19 +52,19 @@ class Search extends React.Component {
 		if(err) console.log('ERROR RENDERING MOVIES')
     this.selectMovie(movie)
   }.bind(this));
-	
+
 	}
-	// <SearchResultsDisplay currentMovie={this.state.currentMovie}/> 
+	// <SearchResultsDisplay currentMovie={this.state.currentMovie}/>
 	render(){
 		return (
 			<div>
 				<form onSubmit={this.handleSubmit}>
 					<input onChange={this.handleSearch} type="text" defaultValue="Search for movies..." />
 				</form>
-				
+
 			</div>
 		)
 	}
 }
 
-export default Search; 
+export default Search;
